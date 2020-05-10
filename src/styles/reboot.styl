@@ -1,0 +1,65 @@
+
+html
+  overflow auto
+  overflow-x visible
+  overflow-y visible
+  box-sizing border-box
+  font-family sans-serif
+  line-height 1.15
+  -ms-text-size-adjust 100%
+  -webkit-text-size-adjust 100%
+  -ms-overflow-style scrollbar
+  -webkit-tap-highlight-color rgba(0,0,0,0)
+
+*,
+*::before,
+*::after
+  box-sizing inherit
+
+body
+  margin 0
+  font-family $font-family-base
+  font-size $font-size-base
+  font-weight $font-weight-base
+  line-height $line-height-base
+  color $body-color
+  background-color $body-bg
+
+a
+  color $link-color
+  text-decoration $link-decoration
+  background-color transparent
+  -webkit-text-decoration-skip objects
+  &:hover
+    color $link-hover-color
+    // text-decoration $link-hover-decoration
+
+
+img
+  vertical-align middle
+  border-style none
+
+input, textarea, select, button
+  font-size $font-size-base
+
+input, textarea, button
+  &:focus
+    outline none
+
+input:-webkit-autofill
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+
+textarea
+  resize none
+
+table
+  border-collapse collapse
+
+// reboot chrome style
+video::-internal-media-controls-download-button
+  display none
+video::-webkit-media-controls-enclosure
+  overflow hidden
+video::-webkit-media-controls-panel
+  width calc(100% + 30px) /* Adjust as needed */
+

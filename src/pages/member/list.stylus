@@ -1,0 +1,445 @@
+.member-pad {
+  background #f0f2f5
+  padding 3px 8px 15px 10px
+
+  .member-wrap {
+    height 757px
+    margin 15px 10px 15px 10px
+    background #fff
+    .member-list {
+      // padding 30px 15px
+      display flex
+      background #f0f2f5
+
+      .department-tree {
+        width 250px
+        height 800px
+        background #fff
+        padding 0
+        box-sizing border-box
+
+        .operation {
+          display flex
+          justify-content space-around
+          padding-top 24px
+          padding-bottom 24px
+          height 73px
+          cursor pointer
+
+          .anticon {
+            padding 5px 5px 0 5px
+          }
+          .anticon:hover {
+            // box-shadow 0 15px 15px rgb(212, 212, 212)
+            transform scale(1.5) rotate(6deg)
+          }
+
+        }
+
+        .tree-part {
+          padding-left 12px
+          border-right 0.5px solid #EBEBEB
+          height 726px
+          background #fff
+          overflow hidden
+          box-shadow -2px 3px 10px rgb(212, 212, 212)
+          // border-radius 10px
+          border-top 0.5px solid #EBEBEB
+
+          // overflow: hidden;
+          .ant-tree {
+            overflow hidden
+
+            .ant-tree-switcher {
+              margin 7px 2px
+            }
+
+            .ant-tree-node-content-wrapper {
+              height 36px
+              line-height 1.5
+              padding 8px 200px 8px 12px
+
+              .ant-tree-iconEle {
+                margin 8px 2px
+              }
+
+              .ant-tree-title {
+                font-weight bold
+              }
+            }
+
+            .ant-tree-node-selected {
+              color #1890ff
+              border-left 2px solid #1890ff
+            }
+
+            li span.ant-tree-node-content-wrapper:before {
+              height 40px
+            }
+          }
+        }
+
+        .tree-part:hover {
+          overflow auto
+          // box-shadow 10px 20px 10px 10px rgb(212, 212, 212, 0.2) inset
+          background #fff
+
+        }
+
+        .tree-part::-webkit-scrollbar {
+          width 8px
+        }
+
+        .tree-part::-webkit-scrollbar-track {
+          border-radius 10px
+          background #fff
+          border-right 0.5px solid #EBEBEB
+          // width 15px
+        }
+
+        .tree-part::-webkit-scrollbar-thumb {
+          background-color rgba(0, 0, 0, 0.15)
+          // background-color #CCCCCC
+          border-radius 8px
+          width 7px
+        }
+      }
+
+      .member-table {
+        flex 1
+        // height 800px
+        margin-left 16px
+        background-color #fff
+        box-shadow -2px 3px 10px rgb(212, 212, 212)
+
+        .top-part {
+          display flex
+          justify-content space-between
+          padding 24px 30px 0 15px
+          height 56px
+
+          .search-bar {
+            margin-left 2px
+
+            .ant-input-search {
+              border-radius 6px
+            }
+          }
+
+          .button-group {
+            // width 390px
+            height 32px
+            display flex
+            // justify-content space-around
+
+            .ant-tag {
+              margin-right 30px
+              margin-top 5px
+              cursor default
+            }
+
+            .importTips {
+              color #1890ff
+              padding-top 5px
+              text-align center
+              margin-right 38px
+              white-space nowrap
+            }
+
+            button.enterprise {
+              width 110px
+              height 32px
+              border-radius 6px
+              cursor pointer
+              border 1px solid #1890ff
+              margin-right 50px
+            }
+
+            button.able-add {
+              width 110px
+              height 32px
+              border-radius 6px
+              cursor pointer
+              border 1px solid #1890ff
+              // background-color #fff
+              // color #1890ff
+              background-color #1890ff
+              color #fff
+            }
+            .able-add:hover {
+              background-color #65c2fa
+              border 1px solid #65c2fa
+            }
+
+            .disable-add {
+              background-color rgba(0, 0, 0, 0.11)
+              color #fff
+              width 110px
+              height 32px
+              border-radius 6px
+              cursor not-allowed
+              border 0
+            }
+
+            .untie {
+              background-color #1890ff
+              color #fff
+            }
+
+            .untie:hover {
+              background-color #65c2fa
+              border 0px
+            }
+
+            .import {
+              background-color #1890ff
+              color #fff
+            }
+
+            .import:hover {
+              background-color #65c2fa
+              border 0px
+            }
+          }
+        }
+
+        .table {
+          padding 15px 15px 0 15px
+
+          .ant-table-thead > tr > th, .ant-table-tbody > tr > td {
+            padding 13px 0px 13px 15px
+          }
+
+          .ant-btn {
+            // border-color #fff
+            padding 0
+          }
+
+          .ant-table-pagination.ant-pagination {
+            margin 20px 15px 36px 15px
+
+            .ant-pagination-total-text {
+              border-left 3px solid #1890ff
+              font-size 16px
+              padding-left 6px
+              height 17px
+              line-height 16px
+              margin-right 18px
+            }
+          }
+
+          .start-account {
+            color #00CC99
+          }
+
+          .disable-account {
+            color red
+          }
+
+          .disabled {
+            color rgba(0, 0, 0, 0.25)
+          }
+
+          .abled {
+          }
+        }
+      }
+    }
+  }
+}
+
+.custom-modal {
+  .ant-modal-content {
+    border 0
+    border-radius 5px
+    background-clip padding-box
+    box-shadow 0 0 0 rgba(0, 0, 0, 0)
+
+    .ant-modal-header {
+      .ant-modal-title {
+        font-weight bold
+        font-size 17px
+      }
+    }
+
+    .ant-modal-body {
+      display flex
+
+      .role {
+        border-right 1px solid #EBEBEB
+
+        .role-title {
+          font-weight 750
+          color #1890ff
+          font-size 16px
+        }
+
+        .ant-checkbox-group {
+          display flex
+          flex-direction column
+          .ant-checkbox-group-item {
+            white-space nowrap
+            margin-bottom 10px
+          }
+        }
+        
+      }
+
+      .role-config {
+        height 520px
+        overflow hidden
+      }
+
+      .role-config:hover {
+        overflow auto
+      }
+
+      .role-config::-webkit-scrollbar {
+        width 8px
+      }
+
+      .role-config::-webkit-scrollbar-track {
+        border-radius 10px
+        background #fff
+        border-right 0.5px solid #EBEBEB
+        // width 15px
+      }
+
+      .role-config::-webkit-scrollbar-thumb {
+        background-color rgba(0, 0, 0, 0.2)
+        // background-color #CCCCCC
+        border-radius 8px
+        width 8px
+      }
+
+      .tree {
+        margin-left 30px
+        overflow hidden
+
+        .tree-part {
+          font-weight 750
+          color #1890ff
+          font-size 16px
+        }
+      }
+
+      .tree-config {
+        height 570px
+        overflow hidden
+      }
+
+      .tree-config:hover {
+        overflow auto
+      }
+
+      .tree-config::-webkit-scrollbar {
+        width 8px
+      }
+
+      .tree-config::-webkit-scrollbar-track {
+        border-radius 10px
+        background #fff
+        border-right 0.5px solid #EBEBEB
+        // width 15px
+      }
+
+      .tree-config::-webkit-scrollbar-thumb {
+        background-color rgba(0, 0, 0, 0.2)
+        // background-color #CCCCCC
+        border-radius 8px
+        width 8px
+      }
+    }
+  }
+}
+
+.wechat-import {
+  .ant-modal-content {
+    border 0
+    border-radius 5px
+    background-clip padding-box
+    box-shadow 0 0 0 rgba(0, 0, 0, 0)
+
+    .ant-modal-header {
+      padding 16px 32px
+      .ant-modal-title {
+        font-size 17px
+      }
+    }
+
+    .ant-modal-body {
+      padding 35px 36px 10px 36px
+      .enterprise-id {
+        display flex
+
+        span {
+          font-size 16px
+          white-space nowrap
+          padding-top 5px
+          width 86px
+          margin-right 18px
+        }
+
+      }
+
+      .admin-api {
+        margin-top 6px
+        margin-bottom 30px
+        margin-left 90px
+      }
+      .contact-api {
+        margin-top 6px
+        margin-bottom 25px
+        margin-left 90px
+      }
+
+      .secret {
+        display flex
+
+        span {
+          font-size 16px
+          padding-top 5px
+          white-space nowrap
+          width 86px
+          margin-right 8px
+        }
+      }
+
+      .token {
+        display flex
+
+        span {
+          margin-right 40px
+          font-size 16px
+        }
+      }
+
+      .aes-key {
+        display flex 
+        span {
+          font-size 16px
+        }
+      }
+
+      .tips {
+        margin-top 35px
+        text-align center
+        font-size 15px
+        span {
+          color orange
+        }
+      }
+    }
+  }
+}
+
+.wechat-bind {
+  .ant-modal-confirm-body {
+    .ant-modal-confirm-content {
+    }
+  }
+
+  .ant-modal-confirm-btns {
+    margin-top 0
+  }
+}

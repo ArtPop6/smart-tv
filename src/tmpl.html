@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport"
+        content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="/static/favicon.ico"/>
+  <title>运营平台</title>
+  <script src="//api.map.baidu.com/api?v=2.0&ak=EB4184f529193f6a30d92285b97e0755&s=1"
+          type="text/javascript"></script>
+</head>
+
+
+<body class="scrollbar">
+<div id="app"></div>
+<div>
+  <% if(process.env.NODE_ENV === 'development') {%>
+  <script>window.BASE_URL = 'http://localhost:10004/api/';</script>
+  <% } else { %>
+  <!-- 分环境配置 -->
+  <% if (process.env.SERVER_ENV === 'dev') {%>
+  <script>window.BASE_URL = 'http://dev.tv.ampmfit.net/api/';</script>
+  <% } else if (process.env.SERVER_ENV === 'qa') { %>
+  <script>window.BASE_URL = 'http://qa.tv.ampmfit.net/api/';</script>
+  <% } else if (process.env.SERVER_ENV === 'pre') { %>
+  <script>window.BASE_URL = 'http://pre.tv.ampmfit.cn/api/';</script>
+  <% } else { %>
+  <script>window.BASE_URL = 'http://tv.ampmfit.cn/api/';</script>
+  <% } %>
+
+  <% } %>
+</div>
+</body>
+
+</html>

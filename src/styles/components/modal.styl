@@ -1,0 +1,70 @@
+
+body.modal-open
+  overflow hidden
+
+// common setting
+.modal,
+.modal-backdrop
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+
+.modal-backdrop
+  z-index 10
+  background-color #000
+  opacity .5
+
+.modal
+  overflow-x hidden
+  overflow-y auto
+  z-index 11
+  .button
+    background-color transparent
+    border-color transparent
+    cursor pointer
+    &.btn-primary
+      button(#fff, #007bff)
+    &.btn-secondary
+      button(#fff, #868e96)
+    &.disabled, &[disabled]
+      button(#fff, #ccc)
+.modal-dialog
+  position relative
+  width 600px
+  margin 30px auto
+  background-color #fff
+  border-radius 5px
+  overflow hidden
+  &.large
+    width 800px
+
+// header
+.modal-header
+  display flex
+  padding 15px
+  // color #999
+  border-bottom 1px solid #e9ecef
+  align-items flex-start
+  justify-content space-between
+  cursor default
+  user-select none
+  -webkit-app-region drag
+  .modal-title
+    margin 0
+    line-height 1.5
+    font-weight 400
+    font-size 14px
+
+// footer
+.modal-footer
+  display flex
+  padding 15px
+  border-top 1px solid #e9ecef
+  align-items center
+  justify-content flex-end
+  & > :not(:last-child)
+    margin-right 4px
+  & > :not(:first-child)
+    margin-left 4px
